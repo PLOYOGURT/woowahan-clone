@@ -5,3 +5,7 @@ function setClassName() {
 function reset(){
 	document.getElementsByClassName("headerOver")[0].classList.remove('headerOver');
 }
+
+//main 화면 넘어가는 거
+
+//시간이 없는데ㅔ 머리가 안돌아가 ㅠㅠㅠㅠ

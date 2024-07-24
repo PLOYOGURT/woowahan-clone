@@ -5,9 +5,9 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-html .content {
+.content {
 	width: 100vw;
-	height: 100vw;
+	height: 100vh;
 }
 
 li {
@@ -204,7 +204,6 @@ nav .beta a:after {
 	max-width: 160px;
 	padding: 0 12px;
 }
-
 /*.language*/
 .language {
 	color: #d6d7da;
@@ -251,6 +250,8 @@ main {
 .visual {
 	height: calc(100vh - 95px);
 	display: block;
+	display: flex;
+
 
 	position: relative;
 	overflow: hidden;
@@ -259,16 +260,51 @@ main {
 .swiper {
 	width: 100%;
 	height: 100%;
-	overflow: hidden;
+
+	transform: translate(-200vw);
 }
 .pages {
 	width: 500vw;
 	transition: transform 0.5s ease-in-out;
+
 }
-.swiper_side {
+.pages li {
 	width: 100vw;
+	height: 100%;
 	float: left;
 }
+.pages img,video{
+	width: 100vw;
+	height: calc(100vh - 95px);
+	object-fit: cover;
+
+}
+
+/* 인디케이트 */
+.mainBtns{
+	z-index: 5;
+	bottom: 49px;
+
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.swiperBtn{
+	opacity: 1;
+    margin: 0 4px;
+    border-radius: 4px;
+    background-color: hsla(0, 0%, 100%, .5);
+
+	display: inline-block;
+    width: 8px;
+    height: 8px;
+    font: 0 / 0 a;
+    background-color: hsla(0, 0%, 100%, .5);
+    transition: width .3s ease-in-out;
+}
+
 
 /* footer */
 footer {
@@ -280,7 +316,7 @@ footer {
 
 .footerInner {
 	position: relative;
-	max-width: 1186px;
+	/* max-width: 1186px; */
 	margin: 0 auto;
 	padding: 0 7px;
 }
