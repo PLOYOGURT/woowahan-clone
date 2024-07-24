@@ -1,0 +1,348 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.content {
+	width: 100vw;
+	height: 100vh;
+}
+
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+
+button {
+	border: none;
+	font-size: 12px;
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	background-color: transparent;
+	color: inherit;
+}
+/* 헤더 */
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+
+	z-index: 100;
+	background-color: #fff;
+	transition: height .2s linear .1s, -webkit-transform .2s linear;
+    transition: transform .2s linear, height .2s linear .1s;
+    transition: transform .2s linear, height .2s linear .1s, -webkit-transform .2s linear;
+}
+
+header:after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #000;
+	opacity: 0.1;
+}
+
+/* 찐 네비 */
+.inNav{
+	width: 100%;
+	padding: 0px 20px;
+	position: relative;
+
+    display: flex;
+
+    align-items: flex-start;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+/*헤더에 로고*/
+h1{
+	position: relative;
+	z-index: 1;
+    display: flex;
+
+    align-items: center;
+    flex: none;
+    height: 95px;
+}
+
+h1 a{
+	height: 31px;
+
+
+}
+h1 img {
+	height: 100%;
+}
+
+/* 헤더네비 */
+
+.headerNav {
+	display: flex;
+	height: 95px;
+	justify-content: flex-end;
+	flex: 1;
+}
+/* 중간 네비 */
+.nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	line-height: 1.75;
+	letter-spacing: -0.02em;
+}
+
+/* .nav, */
+.nav > ul>li{
+	height: 95px;
+}
+
+.nav ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.nav li {
+	display: flex;
+	align-items: center;
+/
+}
+.nav a {
+	display: inline-block;
+	padding: 0 15px;
+}
+
+.nav strong {
+	font-weight: 400;
+}
+.active{
+    font-weight: bold;
+}
+
+nav .beta a:after {
+	content: "BETA";
+	color: rgba(35, 35, 36, 0.5);
+	font-size: 10px;
+	font-weight: 700;
+	line-height: 1;
+	padding: 3px;
+
+	position: absolute;
+}
+
+.nav_sub {
+	position: absolute;
+	top: 95px;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	width: 100%;
+	height: 64px;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.15s linear 0s;
+}
+
+.nav_sub ul{
+	display: flex;
+}
+
+/*네비에 hover했을때 ㅠㅠ */
+/* 1_굵기 바뀜 */
+.nav li:hover strong {
+	font-weight: bold;
+}
+
+.nav_sub li:hover{
+	font-weight: bold;
+}
+/* 2_드롭다운  header가 160px로 늘어남*/
+.headerOver {
+	height: 160px;
+
+	-webkit-transition: height .2s linear .0s, -webkit-transform .2s linear;
+    transition: height .2s linear .0s, -webkit-transform .2s linear;
+    transition: transform .2s linear, height .2s linear .0s;
+    transition: transform .2s linear, height .2s linear .0s, -webkit-transform .2s linear;
+}
+
+.nav li:hover .nav_sub{
+	opacity: 1;
+	pointer-events: all;
+	transition: opacity .15s linear .15s;
+}
+
+
+
+/* nav .btn */
+
+/* .link */
+.link {
+	display: flex;
+	align-items: center;
+
+	font-size: 12px;
+}
+.link svg {
+	width: 8px;
+	height: 8px;
+	margin-left: 4px;
+}
+.link a {
+	white-space: nowrap;
+	max-width: 160px;
+	padding: 0 12px;
+}
+/*.language*/
+.language {
+	color: #d6d7da;
+	font-weight: 700;
+	position: relative;
+	z-index: 1;
+
+	display: flex;
+	align-items: center;
+}
+
+.language ul {
+	display: flex;
+	align-items: center;
+}
+
+.language li {
+	position: relative;
+}
+
+.language [disabled] {
+	color: #232324;
+	cursor: default;
+}
+/* 두번째 li 뒤에 ::after 설정하기!! */
+.language ul li:not(:first-child):after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 1px;
+	height: 10px;
+	margin-top: -5px;
+	background-color: #d6d7da;
+}
+
+/* 메인 */
+main {
+	z-index: 50;
+	margin: 0;
+	padding-top: 95px;
+}
+
+
+/* footer */
+footer {
+	color: #37373a;
+	padding: 60px 24px 85px;
+	background-color: #f3f4f5;
+	display: block;
+}
+
+.footerInner {
+	position: relative;
+	/* max-width: 1186px; */
+	margin: 0 auto;
+	padding: 0 7px;
+}
+
+/* 푸터의 네비 */
+.footerNav {
+	display: flex;
+}
+.item {
+	margin-top: 8px;
+	padding-right: 8px;
+	line-height: 1.4;
+
+	flex: 1;
+}
+.footerNav strong {
+	line-height: 1.75;
+}
+.item ul {
+	color: #6c6d6f;
+	font-size: 14px;
+}
+.item li {
+	margin-top: 8px;
+	padding-right: 8px;
+	line-height: 1.4;
+}
+.icon-ccm {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin: -3px 0 0 0;
+	background-size: cover;
+	background-image: url(data:image/png;base64,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);
+}
+.ccm {
+	display: inline-flex;
+	align-items: flex-start;
+}
+
+/* 푸터의 주소 */
+.footerAddress {
+	margin-top: 28px;
+	margin-right: 345px;
+}
+.footerAddress h2 {
+	font-weight: 700;
+	line-height: 1.75;
+	margin-bottom: 8px;
+	font-size: inherit;
+}
+address {
+	font-size: 14px;
+	font-style: normal;
+	line-height: 1.7142857143;
+}
+address i {
+	font-style: normal;
+	display: inline-block;
+	margin: 0 4px;
+}
+
+/* 푸터에 있는 select 같은 버튼 */
+.footerBtn {
+	position: absolute;
+	bottom: 0;
+	right: 7px;
+	width: 327px;
+}
+.footerBtn button {
+	font-size: 14px;
+	text-align: left;
+	display: flex;
+	align-items: center;
+
+	justify-content: space-between;
+	width: 100%;
+	min-height: 50px;
+	padding: 13px 16px;
+
+	border: 1px solid #a6a7a9;
+	border-radius: 8px;
+	background: #fff;
+}
