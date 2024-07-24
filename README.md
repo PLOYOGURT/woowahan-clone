@@ -15,6 +15,7 @@
 
 - [ ] **HTML, CSS, JAVASCRIPT 사용하도록 합니다.**
 - [ ] **로고나 사진 등은 assets 폴더 내에 위치하도록 구성합니다.**
+- [ ] **폴더 추가해도 상관없습니다**
 <img width="1710" alt="스크린샷 2024-07-14 19 18 47" src="https://github.com/user-attachments/assets/3f2b496c-4a77-4d4d-908c-e7eea7622b2c">
 
 - [ ] Main은 위 사진과 같이 합니다. 위 사진의 아래부분은 하지않아도 됩니다. (footer는 해야합니다)<br>
