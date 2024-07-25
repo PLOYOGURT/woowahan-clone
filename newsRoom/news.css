@@ -399,8 +399,11 @@ section {
 	vertical-align: middle;
 }
 
-input::placeholder{
+.bar input::placeholder{
 	color: #d6d7da;
+}
+.bar input{
+	border: none;
 }
 
 /* 뉴스룸 네비 */
@@ -487,4 +490,117 @@ input::placeholder{
     font-weight: 700;
     line-height: 1.4;
     text-align: center;
+}
+
+/* 뉴스들 */
+#newsList{
+	max-width: 1020px;
+	margin: 0 auto 60px;
+}
+.newsBox{
+	border-bottom: 1px solid #f3f4f5;
+}
+.newsBox:hover{
+	background-color: #f1f1f1;
+}
+.newsBox>a{
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+/* 기사 사진 */
+.newsImg{
+	width: 260px;
+    height: 208px;
+    margin-right: 40px;
+
+	position: relative;
+    overflow: hidden;
+}
+.newsImg:after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+/* 호버했을때 img확대 */
+.newsBox:hover img{
+	transform: scale(1.2); 
+    transition: transform .5s;
+}
+/* 호버한뒤 */
+.newsImg img{
+	transform: scale(1.0); 
+    transition: transform .5s; 
+}
+
+
+
+@supports ((-o-object-fit:cover) or (object-fit:cover)) {
+    .newsImg img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+}
+
+/* 뉴스정보들 */
+.newsInfo{
+	flex: 1;
+    overflow: hidden;
+
+	font-size: 20px;
+    line-height: 1.6;
+}
+
+/* 제목 */
+.list-title{
+    font-weight: bold;
+}
+.list-title, .list-desc{
+    color: #232324;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+}
+/* 밑 내용 */
+.list-desc{
+	margin-bottom: 10px;
+    line-height: 1.625;
+
+	font-size: 16px;
+}
+/* 날짜 */
+time{
+	position: relative;
+    color: #a6a7a9;
+
+	font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7142857143;
+}
+
+/* 마지막 뉴스 버튼 */
+.newsBtn{
+    display: flex;
+    color: #232324;
+    font-size: 16px;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+}
+button.active{
+	border-radius: 50%;
+    background-color: #ebeef2;
+}
+.newsBtn button{
+    width: 32px;
+    height: 32px;
+    margin: 0 8px;
 }

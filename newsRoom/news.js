@@ -34,8 +34,8 @@ const news = [
         img : "../assets/newsImg/3.png"
     },
     {
-        title : "배민ㄴ 장보기∙쇼핑, 배우 김신록과 TV모델 광고 시작",
-        info : "장보기도 역시 배민이었어",
+        title : "배민 장보기∙쇼핑, 배우 김신록과 TV모델 광고 시작",
+        info : "\"장보기도 역시 배민이었어\"",
         date : "2024.07.08",
         img : "../assets/newsImg/4.jpg"
     },
@@ -83,12 +83,10 @@ const newsHtml =  news.map(news => {
     <div class="newsBox">
         <a href="./news.html">
             <div class="newsImg">
-                <img src="${news.img}" alt="" />
+                <img src="${news.img}" alt=""/>
             </div>
             <div class="newsInfo">
-                <p class="list-title">
-                    <div>${news.title}</div>
-                </p>
+                <p class="list-title">${news.title}</p>
                 <p class="list-desc">${news.info}</p>
                 <div>
                     <time>${news.date}</time>
