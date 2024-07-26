@@ -55,6 +55,11 @@ ul{
     /* font-family: Pretendard-Regular; */
     
 }
+.zzz{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .header-list-left{
     padding: 0px 8px;
     font-size: 12px;
@@ -254,4 +259,144 @@ footer{
 }
 .header1 div .header-list-left:hover{
     font-weight: 800;
+}
+.newsroom{
+    font-size: 48px;
+    font-weight: 800;
+    margin: 80px 0px 20px;
+
+}
+.inner-sec{
+    margin-bottom: 80px;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+.section1{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+.letter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.serch button{
+    border: none;
+    background-color: white;
+}
+.upserch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.serch{
+    border-bottom: 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.serch input:focus{
+    outline: none;
+}
+.serch input{
+    width: 400px;
+    height: 50px;
+    border: none;
+    font-size: 20px;
+}
+#news{
+    font-weight: 800;
+}
+.bar{
+    font-size: 16px;
+    display: flex;
+    color: #d6d7da;
+}
+.sec1-a1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.sec1-a1 a{
+    padding: 0px 20px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #d6d7da;
+    transition: 1s;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.sec1-a1 a:hover{
+    color: black;
+}
+#select{
+    color: black;
+}
+
+
+
+/* map css */
+
+
+
+.user-profile {
+    border: none;
+    padding: 40px 20px;
+    border-radius: 5px;
+    /* text-align: center; */
+    width: 980px;
+    height: 208px;
+    border-bottom: 1px solid #f3f4f5;
+    display: flex;
+    gap: 40px;
+    
+  }
+  .user-profile:hover{
+    background-color: #f3f4f5;
+  }
+  .user-profile img {
+    width: 260px;
+    height: 208px;
+  }
+  .news{
+    display: flex;
+  }
+  #user-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .title{
+    font-size: 36px;
+    font-weight: 800;
+  }
+.letter1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0px 40px;
+}
+hr{
+    border: 0px;
+    background-color: #e5e5e5;
+    height: 1px;
+}
+.title1{
+    font-size: 22px;
+    font-weight: 800;
+}
+.letter0{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

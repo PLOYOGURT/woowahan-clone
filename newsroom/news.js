@@ -224,3 +224,35 @@ for (let j = 0; j < sublist4.length; j++) {
 
 
 
+// 더미 데이터 생성
+const users = [
+    { title: "“배민상회 7주년 행사에 사장님을 초대합니다”", subtitle: "누적주문 900만 건 돌파..배민상회 론칭 7주년 기념 할인행사", data:"2024.07.22", img: "/assets/fakeimg1.png" },
+    { title: "“배민상회 7주년 행사에 사장님을 초대합니다”", subtitle: "누적주문 900만 건 돌파..배민상회 론칭 7주년 기념 할인행사", data:"2024.07.22", img: "/assets/fakeimg1.png" },
+    { title: "“배민상회 7주년 행사에 사장님을 초대합니다”", subtitle: "누적주문 900만 건 돌파..배민상회 론칭 7주년 기념 할인행사", data:"2024.07.22", img: "/assets/fakeimg1.png" },
+    { title: "“배민상회 7주년 행사에 사장님을 초대합니다”", subtitle: "누적주문 900만 건 돌파..배민상회 론칭 7주년 기념 할인행사", data:"2024.07.22", img: "/assets/fakeimg1.png" },
+    { title: "“배민상회 7주년 행사에 사장님을 초대합니다”", subtitle: "누적주문 900만 건 돌파..배민상회 론칭 7주년 기념 할인행사", data:"2024.07.22", img: "/assets/fakeimg1.png" },
+    { title: "“배민상회 7주년 행사에 사장님을 초대합니다”", subtitle: "누적주문 900만 건 돌파..배민상회 론칭 7주년 기념 할인행사", data:"2024.07.22", img: "/assets/fakeimg1.png" },
+    { title: "“배민상회 7주년 행사에 사장님을 초대합니다”", subtitle: "누적주문 900만 건 돌파..배민상회 론칭 7주년 기념 할인행사", data:"2024.07.22", img: "/assets/fakeimg1.png" },
+    { title: "“배민상회 7주년 행사에 사장님을 초대합니다”", subtitle: "누적주문 900만 건 돌파..배민상회 론칭 7주년 기념 할인행사", data:"2024.07.22", img: "/assets/fakeimg1.png" },
+    { title: "“배민상회 7주년 행사에 사장님을 초대합니다”", subtitle: "누적주문 900만 건 돌파..배민상회 론칭 7주년 기념 할인행사", data:"2024.07.22", img: "/assets/fakeimg1.png" },
+    { title: "“배민상회 7주년 행사에 사장님을 초대합니다”", subtitle: "누적주문 900만 건 돌파..배민상회 론칭 7주년 기념 할인행사", data:"2024.07.22", img: "/assets/fakeimg1.png" }
+  ];
+
+  // 사용자 데이터를 HTML로 변환
+  const userHtml = users.map(user => `
+  
+    <div>
+    <a href="#" class="user-profile">
+      <img src="${user.img}" alt="${user.title}" />
+      <div class="letter0">
+        <p class="title1">${user.title}</p>
+        <p>${user.subtitle}</p>
+        <p>${user.data}</p>
+      </div>
+      </a>
+    </div>
+    
+  `).join('');
+
+  // HTML 요소에 사용자 정보를 추가
+  document.getElementById("user-container").innerHTML = userHtml;
