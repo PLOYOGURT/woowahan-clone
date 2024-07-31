@@ -225,34 +225,71 @@ for (let j = 0; j < sublist4.length; j++) {
 
 
 // 더미 데이터 생성
-const users = [
-    { title: "“배민상회 7주년 행사에 사장님을 초대합니다”", subtitle: "누적주문 900만 건 돌파..배민상회 론칭 7주년 기념 할인행사", data:"2024.07.22", img: "/assets/fakeimg1.png" },
-    { title: "“배민상회 7주년 행사에 사장님을 초대합니다”", subtitle: "누적주문 900만 건 돌파..배민상회 론칭 7주년 기념 할인행사", data:"2024.07.22", img: "/assets/fakeimg1.png" },
-    { title: "“배민상회 7주년 행사에 사장님을 초대합니다”", subtitle: "누적주문 900만 건 돌파..배민상회 론칭 7주년 기념 할인행사", data:"2024.07.22", img: "/assets/fakeimg1.png" },
-    { title: "“배민상회 7주년 행사에 사장님을 초대합니다”", subtitle: "누적주문 900만 건 돌파..배민상회 론칭 7주년 기념 할인행사", data:"2024.07.22", img: "/assets/fakeimg1.png" },
-    { title: "“배민상회 7주년 행사에 사장님을 초대합니다”", subtitle: "누적주문 900만 건 돌파..배민상회 론칭 7주년 기념 할인행사", data:"2024.07.22", img: "/assets/fakeimg1.png" },
-    { title: "“배민상회 7주년 행사에 사장님을 초대합니다”", subtitle: "누적주문 900만 건 돌파..배민상회 론칭 7주년 기념 할인행사", data:"2024.07.22", img: "/assets/fakeimg1.png" },
-    { title: "“배민상회 7주년 행사에 사장님을 초대합니다”", subtitle: "누적주문 900만 건 돌파..배민상회 론칭 7주년 기념 할인행사", data:"2024.07.22", img: "/assets/fakeimg1.png" },
-    { title: "“배민상회 7주년 행사에 사장님을 초대합니다”", subtitle: "누적주문 900만 건 돌파..배민상회 론칭 7주년 기념 할인행사", data:"2024.07.22", img: "/assets/fakeimg1.png" },
-    { title: "“배민상회 7주년 행사에 사장님을 초대합니다”", subtitle: "누적주문 900만 건 돌파..배민상회 론칭 7주년 기념 할인행사", data:"2024.07.22", img: "/assets/fakeimg1.png" },
-    { title: "“배민상회 7주년 행사에 사장님을 초대합니다”", subtitle: "누적주문 900만 건 돌파..배민상회 론칭 7주년 기념 할인행사", data:"2024.07.22", img: "/assets/fakeimg1.png" }
-  ];
 
-  // 사용자 데이터를 HTML로 변환
-  const userHtml = users.map(user => `
-  
-    <div>
-    <a href="#" class="user-profile">
-      <img src="${user.img}" alt="${user.title}" />
-      <div class="letter0">
-        <p class="title1">${user.title}</p>
-        <p>${user.subtitle}</p>
-        <p>${user.data}</p>
-      </div>
-      </a>
-    </div>
-    
-  `).join('');
 
-  // HTML 요소에 사용자 정보를 추가
-  document.getElementById("user-container").innerHTML = userHtml;
+
+
+
+let currentIndex = 0;
+const slides = document.querySelectorAll('.carousel-item');
+const dots = document.querySelectorAll('.dot');
+const totalSlides = slides.length;
+let slideInterval = setInterval(nextSlide, 10000); // 3초마다 슬라이드 전환
+
+function showSlide(index) {
+    if (index >= totalSlides) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = totalSlides - 1;
+    } else {
+        currentIndex = index;
+    }
+
+    const offset = -currentIndex * 100;
+    document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === currentIndex);
+    });
+
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+    });
+}
+
+function nextSlide() {
+    showSlide(currentIndex + 1);
+}
+
+function currentSlide(index) {
+    clearInterval(slideInterval); // 자동 전환 멈춤
+    showSlide(index);
+    slideInterval = setInterval(nextSlide, 3000); // 자동 전환 다시 시작
+}
+
+// 초기 슬라이드 설정
+showSlide(currentIndex);
+
+
+
+
+// script.js
+window.addEventListener('DOMContentLoaded', (event) => {
+    const textElement = document.getElementById('text'); // 텍스트 요소를 가져옵니다
+    const text = textElement.textContent; // 요소의 텍스트를 가져옵니다
+    textElement.textContent = ''; // 텍스트를 비워서 초기화합니다
+
+    let index = 0; // 현재 문자 인덱스
+
+    function addNextCharacter() {
+        if (index < text.length) {
+            textElement.textContent += text[index]; // 현재 문자 추가
+            index++; // 인덱스 증가
+            setTimeout(addNextCharacter, 100); // 100ms 후에 다음 문자 추가
+        } else {
+            textElement.style.opacity = 1; // 모든 문자가 추가된 후, opacity를 1로 변경하여 텍스트를 보이게 합니다
+        }
+    }
+
+    addNextCharacter(); // 애니메이션 시작
+});
