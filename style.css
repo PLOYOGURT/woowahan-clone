@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
-/* 기본 */
 
+/* 기본 */
 * {
 	margin: 0;
 	padding: 0;
@@ -10,7 +10,6 @@
 	width: 100vw;
 	height: 100vh;
 }
-
 li {
 	list-style: none;
 }
@@ -18,30 +17,28 @@ a {
 	text-decoration: none;
 	color: #000;
 }
-
 button {
 	border: none;
-	font-size: 12px;
+	font-size: 0.75em;
 	display: inline-block;
-	width: 36px;
-	height: 36px;
+	width: 2.25 em;
+	height: 2.25 em;
 	background-color: transparent;
 	color: inherit;
 }
+
 /* 헤더 */
 .header {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100vw;
-
 	z-index: 100;
 	background-color: #fff;
 	transition: height .2s linear .1s, -webkit-transform .2s linear;
     transition: transform .2s linear, height .2s linear .1s;
     transition: transform .2s linear, height .2s linear .1s, -webkit-transform .2s linear;
 }
-
 header:after {
 	content: "";
 	position: absolute;
@@ -58,41 +55,36 @@ header:after {
 	width: 100%;
 	padding: 0px 20px;
 	position: relative;
-
     display: flex;
-
     align-items: flex-start;
     max-width: 1440px;
     margin: 0 auto;
 }
+
 /*헤더에 로고*/
 h1{
 	position: relative;
 	z-index: 1;
     display: flex;
-
     align-items: center;
     flex: none;
     height: 95px;
 }
-
 h1 a{
 	height: 31px;
-
-
 }
 h1 img {
 	height: 100%;
 }
 
 /* 헤더네비 */
-
 .headerNav {
 	display: flex;
 	height: 95px;
 	justify-content: flex-end;
 	flex: 1;
 }
+
 /* 중간 네비 */
 .nav {
 	position: absolute;
@@ -100,7 +92,6 @@ h1 img {
 	left: 0;
 	width: 100%;
 	height: 100%;
-
 	line-height: 1.75;
 	letter-spacing: -0.02em;
 }
@@ -109,27 +100,22 @@ h1 img {
 .nav > ul>li{
 	height: 95px;
 }
-
 .nav ul {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 }
 .nav li {
 	display: flex;
 	align-items: center;
-/
 }
 .nav a {
 	display: inline-block;
 	padding: 0 15px;
 }
-
 .nav strong {
 	font-weight: 400;
 }
-
 nav .beta a:after {
 	content: "BETA";
 	color: rgba(35, 35, 36, 0.5);
@@ -137,10 +123,8 @@ nav .beta a:after {
 	font-weight: 700;
 	line-height: 1;
 	padding: 3px;
-
 	position: absolute;
 }
-
 .nav_sub {
 	position: absolute;
 	top: 95px;
@@ -155,7 +139,6 @@ nav .beta a:after {
 	opacity: 0;
 	transition: opacity 0.15s linear 0s;
 }
-
 .nav_sub ul{
 	display: flex;
 }
@@ -168,23 +151,20 @@ nav .beta a:after {
 .nav_sub li:hover{
 	font-weight: bold;
 }
+
 /* 2_드롭다운  header가 160px로 늘어남*/
 .headerOver {
 	height: 160px;
-
 	-webkit-transition: height .2s linear .0s, -webkit-transform .2s linear;
     transition: height .2s linear .0s, -webkit-transform .2s linear;
     transition: transform .2s linear, height .2s linear .0s;
     transition: transform .2s linear, height .2s linear .0s, -webkit-transform .2s linear;
 }
-
 .nav li:hover .nav_sub{
 	opacity: 1;
 	pointer-events: all;
 	transition: opacity .15s linear .15s;
 }
-
-
 
 /* nav .btn */
 
@@ -192,8 +172,7 @@ nav .beta a:after {
 .link {
 	display: flex;
 	align-items: center;
-
-	font-size: 12px;
+	font-size: 0.75em;
 }
 .link img {
 	width: 8px;
@@ -203,32 +182,30 @@ nav .beta a:after {
 .link a {
 	white-space: nowrap;
 	max-width: 160px;
-	padding: 0 12px;
+	padding: 0 0.75em;
 }
+
 /*.language*/
 .language {
 	color: #d6d7da;
 	font-weight: 700;
 	position: relative;
 	z-index: 1;
-
 	display: flex;
 	align-items: center;
 }
-
 .language ul {
 	display: flex;
 	align-items: center;
 }
-
 .language li {
 	position: relative;
 }
-
 .language [disabled] {
 	color: #232324;
 	cursor: default;
 }
+
 /* 두번째 li 뒤에 ::after 설정하기!! */
 .language ul li:not(:first-child):after {
 	content: "";
@@ -247,27 +224,20 @@ main {
 	margin: 0;
 	padding-top: 95px;
 }
-
 .visual {
 	height: calc(100vh - 95px);
 	display: block;
 	display: flex;
-
-
 	position: relative;
 	overflow: hidden;
 }
-
 .swiper {
 	width: 100%;
 	height: 100%;
-
-	/* transform: translate(-200vw); */
 }
 .pages {
 	width: 500vw;
 	transition: transform 0.5s ease-in-out;
-
 }
 .pages li {
 	width: 100vw;
@@ -292,7 +262,6 @@ main {
     left: 50%;
     transform: translateX(-50%);
 }
-
 .swiperBtn{
 	opacity: 1;
     margin: 0 4px;
@@ -306,11 +275,11 @@ main {
     background-color: hsla(0, 0%, 100%, .5);
     transition: width .3s ease-in-out;
 }
-
 .swiperBtn.btnActive{
 	width: 20px;
 	background-color: #fff;
 }
+
 /* 메인 안 내용 */
 .text{
 	position: absolute;
@@ -319,13 +288,11 @@ main {
 	height: 100%;
 	z-index: 80;
 	margin: 0 auto;
-
 	display: flex; 
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
-
 .text p{
 	text-align: center;
 	color: #fff;
@@ -344,7 +311,6 @@ main {
 	margin: 48px auto;
 }
 
-
 /* footer */
 footer {
 	color: #37373a;
@@ -352,10 +318,8 @@ footer {
 	background-color: #f3f4f5;
 	display: block;
 }
-
 .footerInner {
 	position: relative;
-	/* max-width: 1186px; */
 	margin: 0 auto;
 	padding: 0 7px;
 }
@@ -368,7 +332,6 @@ footer {
 	margin-top: 8px;
 	padding-right: 8px;
 	line-height: 1.4;
-
 	flex: 1;
 }
 .footerNav strong {
@@ -399,44 +362,42 @@ footer {
 /* 푸터의 주소 */
 .footerAddress {
 	margin-top: 28px;
-	margin-right: 345px;
+	margin-right: 21.56 em;
 }
 .footerAddress h2 {
 	font-weight: 700;
 	line-height: 1.75;
-	margin-bottom: 8px;
+	margin-bottom: 0.50 em;
 	font-size: inherit;
 }
 address {
-	font-size: 14px;
+	font-size: 0.88em;
 	font-style: normal;
 	line-height: 1.7142857143;
 }
 address i {
 	font-style: normal;
 	display: inline-block;
-	margin: 0 4px;
+	margin: 0 0.25 em;
 }
 
 /* 푸터에 있는 select 같은 버튼 */
 .footerBtn {
 	position: absolute;
 	bottom: 0;
-	right: 7px;
-	width: 327px;
+	right: 0.44 em;
+	width: 20.44 em;
 }
 .footerBtn button {
-	font-size: 14px;
+	font-size: 0.88em;
 	text-align: left;
 	display: flex;
 	align-items: center;
-
 	justify-content: space-between;
 	width: 100%;
-	min-height: 50px;
-	padding: 13px 16px;
-
-	border: 1px solid #a6a7a9;
-	border-radius: 8px;
+	min-height: 3.13 em;
+	padding: 0.81em 1em;
+	border: 0.06em solid #a6a7a9;
+	border-radius: 0.50 em;
 	background: #fff;
 }

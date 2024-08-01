@@ -1,10 +1,10 @@
 // 네비 hover 했을때 haeder 늘어나는 거
-function setClassName() {
+const setClassName = () => {
 	document.getElementsByClassName("header")[0].className += " headerOver";
 }
 
 
-function reset(){
+const reset = () => {
 	document.getElementsByClassName("headerOver")[0].classList.remove('headerOver');
 
 }
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentIndex = 0;
     let totalSlides = showPages.length / 2;
 
-    function updateButtons() {
+    const updateButtons = () => {
         for (let btn of buttons) {
             if (parseInt(btn.dataset.index) === currentIndex) {
                 btn.classList.add('btnActive');
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    function moveSlide(index) {
+    const moveSlide = (index) => {
         currentIndex = index;
         carouselInner.style.transition = 'transform 0.5s ease';
         carouselInner.style.transform = `translateX(${currentIndex * -100}%)`;
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    function autoMoveSlide() {
+    const autoMoveSlide = () => {
         currentIndex++;
         if (currentIndex >= totalSlides) {
             currentIndex = 0;
